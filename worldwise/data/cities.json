@@ -1,0 +1,64 @@
+{
+  "cities": [
+    {
+      "cityName": "Berlin",
+      "country": "Germany",
+      "emoji": "de",
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Amazing 😃",
+      "position": {
+        "lat": 52.53586782505711,
+        "lng": 13.376933665713324
+      },
+      "id": 98443197
+    },
+    {
+      "cityName": "Ban Pong",
+      "country": "Thailand",
+      "emoji": "th",
+      "date": "2023-07-23T12:16:09.707Z",
+      "notes": "",
+      "position": {
+        "lat": "13.795406203132826",
+        "lng": "99.73388671875"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Sam Ko",
+      "country": "Thailand",
+      "emoji": "th",
+      "date": "2023-07-23T12:16:16.645Z",
+      "notes": "test",
+      "position": {
+        "lat": "14.604847155053898",
+        "lng": "100.28320312500001"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Zalamea de la Serena",
+      "country": "Spain",
+      "emoji": "es",
+      "date": "2023-07-23T12:43:26.754Z",
+      "notes": "",
+      "position": {
+        "lat": "38.685509760012025",
+        "lng": "-5.690917968750001"
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Valpacos",
+      "country": "Portugal",
+      "emoji": "pt",
+      "date": "2023-07-23T12:47:46.211Z",
+      "notes": "",
+      "position": {
+        "lat": "41.45919537950706",
+        "lng": "-7.338867187500001"
+      },
+      "id": 98443202
+    }
+  ]
+}
