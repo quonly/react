@@ -3,7 +3,6 @@ import styles from "./Login.module.css"
 import { useEffect, useState } from "react"
 import { useAuth } from "../contexts/FakeAuthContext"
 import { useNavigate } from "react-router-dom"
-
 export default function Login() {
   const { login, isAuthticated } = useAuth()
   const navigate = useNavigate()
@@ -48,7 +47,7 @@ export default function Login() {
         </div>
 
         <div>
-          <button>Login</button>
+          <button className="cta">Login</button>
         </div>
       </form>
     </main>

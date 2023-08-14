@@ -15,8 +15,8 @@ module.exports = {
   plugins: ["react-refresh"],
   rules: {
     "react-refresh/only-export-components": "warn",
+    "react-hooks/exhaustive-deps": "warn",
     "no-unused-vars": "warn",
     "react/prop-types": "off",
-    "react-hooks/exhaustive-deps": "warn",
   },
 }

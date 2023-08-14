@@ -14,12 +14,7 @@ const formatDate = date =>
   }).format(new Date(date))
 
 const flagemojiToPNG = flag => {
-  return (
-    <img
-      src={`https://flagcdn.com/24x18/${flag}.png`}
-      alt="flag"
-    />
-  )
+  return <img src={`https://flagcdn.com/24x18/${flag}.png`} alt="flag" />
 }
 
 function City() {
@@ -33,7 +28,7 @@ function City() {
     function () {
       getCity(id)
     },
-    [id]
+    [id, getCity]
   )
 
   if (isLoading) return <Spinner />
@@ -72,7 +67,9 @@ function City() {
         </a>
       </div>
 
-      <div><BackButton /></div>
+      <div>
+        <BackButton />
+      </div>
     </div>
   )
 }
