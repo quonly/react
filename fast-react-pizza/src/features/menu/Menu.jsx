@@ -6,7 +6,7 @@ function Menu() {
   const menu = useLoaderData() // data comes from loader function. useEffect = fetch on render and loader = render as you fetch
 
   return (
-    <ul>
+    <ul className="divide-y divide-stone-200 px-2">
       {menu.map(pizza => (
         <MenuItem pizza={pizza} key={pizza.id} />
       ))}
