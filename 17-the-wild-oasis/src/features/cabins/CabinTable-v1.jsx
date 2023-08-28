@@ -1,8 +1,9 @@
 import styled from "styled-components"
+import { deleteCabin, getCabins } from "../../services/apiCabins"
+import { useMutation, useQuery } from "@tanstack/react-query"
 
 import Spinner from "../../ui/Spinner"
 import CabinRow from "./CabinRow"
-import { useCabins } from "./useCabin"
 
 const Table = styled.div`
   border: 1px solid var(--color-grey-200);
@@ -29,11 +30,16 @@ const TableHeader = styled.header`
 `
 
 function CabinTable() {
-  const { isLoading, cabins } = useCabins()
+  const { isLoading, data: cabins } = useQuery({
+    queryKey: ["cabins"], // unique key for this query used for caching and refetching and also for calling with useQueryClient
+    queryFn: getCabins, // should be return promise
+  })
 
   if (isLoading) {
     return <Spinner />
   }
+
+
 
   return (
     <Table role="table">
