@@ -14,12 +14,16 @@ const FullPage = styled.div`
 
 function ProtectedRoute({ children }) {
   const navigate = useNavigate() // this function can call inside other function such as useeffect or useCallback
+  
   // 1. Load the authenticated user
   const { isAuthenticated, isLoading } = useUser()
   // 2. if there is no authenticated user, redirect to login page
-  useEffect(() => {
-    if (!isAuthenticated) navigate("/login")
-  }, [isAuthenticated, navigate, isLoading])
+  useEffect(
+    function () {
+      if (!isAuthenticated && !isLoading) navigate("/login")
+    },
+    [isAuthenticated, isLoading, navigate]
+  )
 
   // 3. Show loading
   if (isLoading)
